@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import './articles.css';
+import './featuredArticle.css';
 import { AppContext } from '../homepage/homepage';
 
 
 /**
- * Container Articles
- * Contains multiple article previews
- * Used on homepage
+ * Component Featured Article
  * @class
  */
-class Articles extends Component {
+class FeaturedArticle extends Component {
  
+
   render() {
       return (
-        <div>
-          <p>Articles</p>
+        <div className="">
           <AppContext.Consumer>
+            <p>Featured</p>
             {(context) => context.number}
           </AppContext.Consumer>
         </div>
@@ -23,4 +22,4 @@ class Articles extends Component {
   }
 }
 
-export default Articles;
+export default FeaturedArticle;

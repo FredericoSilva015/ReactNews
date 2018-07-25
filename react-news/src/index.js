@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Homepage from './containers/homepage/homepage';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import registerServiceWorker from './registerServiceWorker';
-import AppProvider from './appProvider'
 
-ReactDOM.render(
-  <AppProvider>
-    <Homepage />
-  </AppProvider>, 
-    document.getElementById('root'));
+
+ReactDOM.render(<Homepage />,document.getElementById('root'));
 registerServiceWorker();
