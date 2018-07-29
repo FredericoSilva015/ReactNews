@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Homepage from './containers/homepage/homepage';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Header from './components/header/header';
 import registerServiceWorker from './registerServiceWorker';
 
 
-ReactDOM.render(<Homepage />,document.getElementById('root'));
+ReactDOM.render(<Header />,document.getElementById('root'));
 registerServiceWorker();

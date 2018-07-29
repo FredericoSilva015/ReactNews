@@ -14,6 +14,7 @@ class SearchResults extends Component {
   render() {
       return (
         <div className="">
+          <p>Search Results</p>
         </div>
       );
   }

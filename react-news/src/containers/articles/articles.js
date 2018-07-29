@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './articles.css';
-import { AppContext } from '../homepage/homepage';
+import { AppContext } from '../../components/header/header';
+import ArticlePreview from '../../components/articlePreview/articlePreview';
 
 
 /**
@@ -12,11 +13,12 @@ import { AppContext } from '../homepage/homepage';
 class Articles extends Component {
  
   render() {
+    const temp = <ArticlePreview />;
       return (
         <div>
           <p>Articles</p>
           <AppContext.Consumer>
-            {(context) => context.number}
+            {(context) => temp}
           </AppContext.Consumer>
         </div>
       );

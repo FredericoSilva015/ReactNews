@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './featuredArticle.css';
-import { AppContext } from '../homepage/homepage';
+import { AppContext } from '../../components/header/header';
 
 
 /**
@@ -13,9 +13,9 @@ class FeaturedArticle extends Component {
   render() {
       return (
         <div className="">
+          <p>Featured Articles</p>
           <AppContext.Consumer>
-            <p>Featured</p>
-            {(context) => context.number}
+            {(context) => console.log('Featured Article',context)}
           </AppContext.Consumer>
         </div>
       );
