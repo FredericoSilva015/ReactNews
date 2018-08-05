@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './articles.css';
 import ArticlePreview from '../../components/articlePreview/articlePreview';
+import { Link } from 'react-router-dom';
+import './articles.css';
 
 class Articles extends Component {
   
@@ -8,7 +9,13 @@ class Articles extends Component {
      return (
         <div>
           {this.props.data.map(item => {
-            return <ArticlePreview key={item.id} data={item}/>
+            return (
+              <Link key={item.id} 
+                    to={{ pathname:`article/${item.id}` }} 
+              >
+                <ArticlePreview   data={item}/>
+              </Link>
+            );
           })}
         </div>
       );

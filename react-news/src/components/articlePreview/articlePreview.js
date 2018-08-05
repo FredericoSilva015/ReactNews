@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './articlePreview.css';
 import { authorCheck } from '../../utils'
+import './articlePreview.css';
 
 class ArticlePreview extends Component {
   

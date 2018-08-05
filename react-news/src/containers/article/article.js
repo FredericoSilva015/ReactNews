@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { AppContext } from '../../components/header/header';
+import { authorCheck } from '../../utils';
 import './article.css';
-import { authorCheck } from '../../utils'
 
-// TODO =  make a fetch for content and media here
+// TODO:  join all news array here (preview + featured)
 
 /**
  * Container for Article
@@ -11,6 +12,12 @@ import { authorCheck } from '../../utils'
  */
 class Article extends Component {
  
+  test(val) {
+    const id = this.props.location.pathname;
+    console.log('Article', val)
+    console.log('Article Id', id.replace('/article/',''))
+  }
+
   render() {
       return (
         <div className="">
@@ -19,6 +26,11 @@ class Article extends Component {
             <source media="" srcSet=""/>
             <img src="" alt="Place Holder"/>
           </picture>
+        <AppContext.Consumer>
+
+           {(context) => { return this.test(context) }}
+
+        </AppContext.Consumer>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum at elit sed maximus. Donec sed nulla malesuada, placerat magna a, ultricies libero. Duis eu neque scelerisque, aliquam ante quis, finibus ex. Mauris urna est, sollicitudin at nibh at, commodo placerat massa. Vivamus lacinia tellus ut lacinia rutrum. Curabitur quam ipsum, luctus a augue quis, ultricies egestas orci. Sed tristique, dolor a malesuada pellentesque, turpis leo finibus massa, ac volutpat eros libero eget odio. Suspendisse accumsan consequat neque sit amet fermentum. Curabitur pulvinar eros in sapien accumsan lobortis quis id mauris. Duis a massa consequat, iaculis ligula eget, facilisis sem. Donec id nisl eget dolor vestibulum iaculis. Donec iaculis, tellus vitae ultricies interdum, lacus massa commodo augue, id consectetur velit felis a sapien.
 
           Pellentesque enim sem, mattis at blandit a, malesuada sed urna. Nullam auctor condimentum sem bibendum condimentum. Proin efficitur eu dui eu congue. Suspendisse suscipit lectus at quam vehicula, ac lacinia metus egestas. Sed sed metus ligula. Suspendisse potenti. Suspendisse sed porta erat. Vivamus vel bibendum ex. Praesent molestie, odio tristique dignissim accumsan, metus risus aliquam nunc, nec dignissim risus odio ac metus. Sed sagittis, lacus at scelerisque vestibulum, mauris felis maximus ipsum, vel ultrices mauris nibh at orci.

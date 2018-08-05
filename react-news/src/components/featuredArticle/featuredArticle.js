@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './featuredArticle.css';
 import { authorCheck } from '../../utils'
+import './featuredArticle.css';
 
 class FeaturedArticle extends Component {
 

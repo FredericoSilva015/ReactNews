@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './homepage.css';
+import { AppContext } from '../../components/header/header';
 import Articles from '../articles/articles';
 import FeaturedArticle from '../../components/featuredArticle/featuredArticle';
-import { AppContext } from '../../components/header/header';
+import './homepage.css';
 
 class Homepage extends Component {
   
@@ -19,7 +19,7 @@ class Homepage extends Component {
       return (
         <div>
           <FeaturedArticle featured={val.featured} />
-          <Articles data={val.previewArray} isLoaded={val.isLoaded}/>
+          <Articles data={val.previewArray}/>
         </div>
       );
     }

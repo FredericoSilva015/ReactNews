@@ -1,11 +1,11 @@
 import React, { Component, createContext } from 'react';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
-import './header.css';
 import Homepage from '../../containers/homepage/homepage';
 import SearchResults from '../../containers/searchResults/searchResults';
 import Article from '../../containers/article/article';
 import Footer from '../../components/footer/footer';
 import Error from '../../components/error/error';
+import './header.css';
 
 /**
  * @constant {AppContext}
@@ -55,7 +55,7 @@ componentDidMount() {
     // on error
     (error) => {
       this.setState({
-        isLoaded : true,
+        isLoaded : false,
         error,
       })
     }
@@ -72,13 +72,12 @@ render() {
             
             <ul>
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/articles">Article</NavLink></li>
               <li><NavLink to="/search-results">SearchResults</NavLink></li>
             </ul>
 
             <Switch>
               <Route path="/" component={Homepage} exact />
-              <Route path="/articles" component={Article} />
+              <Route path="/article/:id"  name="article" component={Article} />
               <Route path="/search-results" component={SearchResults} />
               <Route  component={Error} />
             </Switch>
