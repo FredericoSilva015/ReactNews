@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-// import './homepage.css';
+import './footer.css';
 
-
-/**
- * Component Footer
- * Used in homepage
- * @class
- */
 class Footer extends Component {
  
 

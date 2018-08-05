@@ -8,23 +8,13 @@ import Footer from '../../components/footer/footer';
 import Error from '../../components/error/error';
 
 /**
- * Global state of the application
  * @constant {AppContext}
+ * @description initialise the Context here
  */
 export const AppContext = createContext();
 
-/**
- * Component Header
- * Changes content on click
- * @class
- */
 class Header extends Component {
 
-/**
- * Component containing global state
- * Used on top most component
- * @class
- */
 constructor(props) {
   super(props);
   this.state = {
@@ -36,8 +26,11 @@ constructor(props) {
 };
 
 /** 
- * Obtain Data from the guardian API
+ * @name componentDidMount
+ * @private
  * @method fetch
+ * @returns {Object}
+ * @description Obtain Data from the guardian API using fetch
  */
 componentDidMount() {
 
@@ -57,7 +50,7 @@ componentDidMount() {
         previewArray : preview,
       });
 
-      console.log('state',this.state)
+      // console.log('state',this.state)
     },
     // on error
     (error) => {

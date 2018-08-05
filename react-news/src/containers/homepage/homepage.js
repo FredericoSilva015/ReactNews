@@ -4,12 +4,15 @@ import Articles from '../articles/articles';
 import FeaturedArticle from '../../components/featuredArticle/featuredArticle';
 import { AppContext } from '../../components/header/header';
 
-/**
- * Container Homepage
- * @class
- */
 class Homepage extends Component {
-
+  
+  /**
+   * @name content
+   * @param {object} val 
+   * @private
+   * @returns {HTMLElement}
+   * @description The loader and content is initiated with this funtion
+   */
   content(val) {
 
     if (val.isLoaded) {
@@ -26,22 +29,14 @@ class Homepage extends Component {
     );
   }
 
-  //  Nedd loader here, else data wont pass down
-
-
   render() {
     return (
-      <div>
-        
-
         <AppContext.Consumer>
           {(context) => {
               return this.content(context);
             }
           }
         </AppContext.Consumer>
-        
-      </div>
     );
   }
 }
