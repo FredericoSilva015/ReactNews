@@ -6,16 +6,26 @@ import './articlePreview.css';
  * Used in homepage
  * @class
  */
-class ArticluePreview extends Component {
- 
+class ArticlePreview extends Component {
+  
+  test() {
+    
+    return (
+      <div>
+        <p>Hello</p>
+        <p>Bye</p>
+      </div>
+    )
+    
+  }
 
   render() {
       return (
         <div className="">
-          <p>Article Preview</p>
+          {this.test()}
         </div>
       );
   }
 }
 
-export default ArticluePreview;
+export default ArticlePreview;

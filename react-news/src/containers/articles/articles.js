@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './articles.css';
-import { AppContext } from '../../components/header/header';
 import ArticlePreview from '../../components/articlePreview/articlePreview';
 
 
@@ -11,15 +10,13 @@ import ArticlePreview from '../../components/articlePreview/articlePreview';
  * @class
  */
 class Articles extends Component {
- 
+  
   render() {
-    const temp = <ArticlePreview />;
-      return (
+     return (
         <div>
-          <p>Articles</p>
-          <AppContext.Consumer>
-            {(context) => temp}
-          </AppContext.Consumer>
+          {this.props.data.map(item => {
+            return <ArticlePreview key={item.id} title={item}/>
+          })}
         </div>
       );
   }

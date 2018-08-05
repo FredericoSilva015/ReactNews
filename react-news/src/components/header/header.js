@@ -30,11 +30,8 @@ constructor(props) {
   this.state = {
     error: null,
     isLoaded: false,
-    data: [],
     featured: null,
-    preview: [],
-    current: null,
-    article: null,
+    previewArray: [],
   }
 };
 
@@ -45,7 +42,7 @@ constructor(props) {
 componentDidMount() {
 
   fetch('https://content.guardianapis.com/search?show-tags=keyword&api-key=3a252dbd-528c-4214-9211-a89fcfb96697')
-  .then(res => res.json())
+  .then(response => response.json())
   .then(
     // on success 
     (result) => {
@@ -55,11 +52,12 @@ componentDidMount() {
       const preview = data;
 
       this.setState({
-        data: data,
         isLoaded : true,
         featured : first,
-        preview : preview,
+        previewArray : preview,
       });
+
+      console.log('state',this.state)
     },
     // on error
     (error) => {
