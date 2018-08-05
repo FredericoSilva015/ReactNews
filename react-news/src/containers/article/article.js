@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './article.css';
+import { authorCheck } from '../../utils'
 
 // TODO =  make a fetch for content and media here
 

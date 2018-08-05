@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './articlePreview.css';
+import { authorCheck } from '../../utils'
 
 /**
  * Component Article Preview
