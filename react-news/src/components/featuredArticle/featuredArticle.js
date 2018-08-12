@@ -11,7 +11,7 @@ class FeaturedArticle extends Component {
           </div>
           <div className="featured-article__content-wrapper">
             {authorCheck(this.props.featured.webTitle, true)}
-            <p className="featured-article__sub-content">
+            <p className="featured-article__preview-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum at elit sed maximus. 
             </p>
           </div>

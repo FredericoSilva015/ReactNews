@@ -1,0 +1,23 @@
+$gap: 64px !default;
+$tablet: 769px !default;
+$desktop: 980px + (2 * $gap) !default;
+
+// Breakpoints
+
+@mixin mobile {
+  @media screen and (max-width: 500px - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet - 1px ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop - 1px ) {
+    @content;
+  }
+}

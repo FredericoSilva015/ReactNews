@@ -7,10 +7,10 @@ class Articles extends Component {
   
   render() {
      return (
-        <div>
+        <div className="articles__wrapper">
           {this.props.data.map(item => {
             return (
-              <Link key={item.id} 
+              <Link className="articles__link" key={item.id} 
                     to={{ pathname:`article/${item.id}` }} 
               >
                 <ArticlePreview   data={item}/>

@@ -1,0 +1,21 @@
+@import '../../breakpoints.scss';
+
+.articles__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.articles__link {
+  flex-basis: 280px;
+  
+  margin: 10px;
+
+  @include tablet {
+    flex-basis: 41%;
+    margin: 20px;
+  }
+  @include desktop {
+    flex-basis: 28%;
+  }
+}

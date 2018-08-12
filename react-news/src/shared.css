@@ -70,9 +70,9 @@ th {
 .container {
   margin: 0 auto;
   position: relative; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1107px) {
     .container {
-      max-width: 1180px;
+      max-width: 980px;
       width: auto; }
       .container.is-fluid {
         margin-left: 64px;
@@ -80,11 +80,23 @@ th {
         max-width: none;
         width: auto; } }
 
-h1, h2, h3, span, p, a {
+span, p, a {
   font-family: 'Open Sans', sans-serif; }
 
+h1, h2, h3 {
+  font-family: 'Libre Franklin', sans-serif; }
+
+a {
+  text-decoration-line: none;
+  text-decoration-line: none;
+  color: #1f4079; }
+
 h1 {
-  font-size: 22px; }
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f4079; }
 
 h2 {
-  font-size: 22px; }
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f4079; }

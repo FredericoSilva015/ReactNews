@@ -7,13 +7,12 @@ class ArticlePreview extends Component {
 
   render() {
       return (
-        <div className="">
-          <picture>
-            <source media="" srcSet=""/>
-            <source media="" srcSet=""/>
-            <img src="" alt="Place Holder"/>
-          </picture>
-          {authorCheck(this.props.data.webTitle)}
+        <div className="article-preview__wrapper">
+          <div className="article-preview__img-wrapper"></div>
+          <div className="article-preview__content-wrapper">
+            {authorCheck(this.props.data.webTitle)}
+          </div>
+
         </div>
       );
   }

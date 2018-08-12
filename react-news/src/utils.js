@@ -15,10 +15,10 @@ import React from 'react';
 
     if (main) {
       return (
-        <h1>
+        <h2>
           {title[0]}
           <span className="author">{title[1]}</span>
-        </h1>
+        </h2>
       );
     }
 

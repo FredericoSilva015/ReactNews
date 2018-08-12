@@ -1,5 +1,22 @@
 @import '../../shared.scss';
+@import '../../breakpoints.scss';
 
 .homepage__content-wrapper {
-  margin: 5%;
+  margin: 0 5%;
+  padding-top: 20vh;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.homepage__header {
+  margin-bottom: 15px;
+  
+  font-size: 25px;
+  font-weight: 600;
+
+  border-bottom: 3px solid #1f4079;  
+  border-image-source: linear-gradient( to right, #1f4079, #fff );
+  border-image-slice: 3;
 }

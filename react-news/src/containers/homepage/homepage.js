@@ -19,7 +19,14 @@ class Homepage extends Component {
       return (
         <div className="container">
           <div className="homepage__content-wrapper">
+          <p className="box"></p>
+          <h2 className="homepage__header">
+            Featured
+          </h2>
             <FeaturedArticle featured={val.featured} />
+          <h2 className="homepage__header">
+            More on ...
+          </h2>
             <Articles data={val.previewArray}/>
           </div>
         </div>
