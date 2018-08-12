@@ -66,28 +66,3 @@ td,
 th {
   padding: 0;
   text-align: left; }
-
-.container {
-  margin: 0 auto;
-  position: relative; }
-  @media screen and (min-width: 768px) {
-    .container {
-      max-width: 1180px;
-      width: auto; }
-      .container.is-fluid {
-        margin-left: 64px;
-        margin-right: 64px;
-        max-width: none;
-        width: auto; } }
-
-h1, h2, h3, span, p, a {
-  font-family: 'Open Sans', sans-serif; }
-
-h1 {
-  font-size: 22px; }
-
-h2 {
-  font-size: 22px; }
-
-.homepage__content-wrapper {
-  margin: 5%; }

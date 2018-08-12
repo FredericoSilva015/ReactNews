@@ -66,13 +66,12 @@ render() {
     return (
       <BrowserRouter>
 
-        <div>
+        <div className="header__wrapper">
           <AppContext.Provider value={this.state}>
             {this.props.children}
             
-            <ul>
+            <ul className="header__list">
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/search-results">SearchResults</NavLink></li>
             </ul>
 
             <Switch>

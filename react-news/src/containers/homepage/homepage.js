@@ -11,21 +11,27 @@ class Homepage extends Component {
    * @param {object} val 
    * @private
    * @returns {HTMLElement}
-   * @description The loader and content is initiated with this funtion
+   * @description The loader and content is initiated with this function
    */
   content(val) {
 
     if (val.isLoaded) {
       return (
-        <div>
-          <FeaturedArticle featured={val.featured} />
-          <Articles data={val.previewArray}/>
+        <div className="container">
+          <div className="homepage__content-wrapper">
+            <FeaturedArticle featured={val.featured} />
+            <Articles data={val.previewArray}/>
+          </div>
         </div>
       );
     }
 
     return (
-      <p>Something went wrong :( . </p>
+      <div className="container">
+        <div className="homepage__content-wrapper">
+          <p>Something went wrong :( . </p>
+        </div>
+      </div>
     );
   }
 

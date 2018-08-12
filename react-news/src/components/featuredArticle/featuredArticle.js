@@ -6,9 +6,15 @@ class FeaturedArticle extends Component {
 
   render() {
      return (
-        <div className="">
-          {authorCheck(this.props.featured.webTitle, true)}
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum at elit sed maximus. Donec sed nulla malesuada, placerat magna a, ultricies libero. Duis eu neque scelerisque, aliquam ante quis, finibus ex. Mauris urna est, </p>
+        <div className="featured-article__wrapper">
+          <div className="featured-article__img-wrapper">
+          </div>
+          <div className="featured-article__content-wrapper">
+            {authorCheck(this.props.featured.webTitle, true)}
+            <p className="featured-article__sub-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum at elit sed maximus. 
+            </p>
+          </div>
         </div>
       );
   }

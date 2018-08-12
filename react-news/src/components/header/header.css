@@ -1,0 +1,6 @@
+.header__wrapper {
+  height: 20vh; }
+
+.header__list {
+  height: inherit;
+  display: inline-flex; }

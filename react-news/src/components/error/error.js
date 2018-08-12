@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import './homepage.css';
 import { NavLink } from 'react-router-dom';
+import './error.css';
 
 /**
  * Component Footer
@@ -12,7 +12,7 @@ class Error extends Component {
 
   render() {
       return (
-        <div className="">
+        <div className="container">
           <p>404! Apologies good sir!But what your looking for, doesn't exist.</p>
 
           <NavLink to="/">Home</NavLink>

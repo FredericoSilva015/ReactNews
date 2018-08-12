@@ -3,7 +3,7 @@ import { AppContext } from '../../components/header/header';
 import { authorCheck } from '../../utils';
 import './article.css';
 
-// TODO:  join all news array here (preview + featured)
+// TODO:  join all news array here (preview + featured), add final title, image
 
 /**
  * Container for Article
