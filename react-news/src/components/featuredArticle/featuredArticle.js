@@ -10,7 +10,7 @@ class FeaturedArticle extends Component {
           <div className="featured-article__img-wrapper">
           </div>
           <div className="featured-article__content-wrapper">
-            {authorCheck(this.props.featured.webTitle, true)}
+            {authorCheck(this.props.featured.webTitle)}
             <p className="featured-article__preview-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum at elit sed maximus. 
             </p>

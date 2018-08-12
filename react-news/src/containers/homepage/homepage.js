@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppContext } from '../../components/header/header';
+import { Link } from 'react-router-dom';
 import Articles from '../articles/articles';
 import FeaturedArticle from '../../components/featuredArticle/featuredArticle';
 import './homepage.css';
@@ -19,14 +20,19 @@ class Homepage extends Component {
       return (
         <div className="container">
           <div className="homepage__content-wrapper">
-          <p className="box"></p>
-          <h2 className="homepage__header">
-            Featured
-          </h2>
-            <FeaturedArticle featured={val.featured} />
-          <h2 className="homepage__header">
-            More on ...
-          </h2>
+
+            <h2 className="homepage__header">
+              Featured
+            </h2>
+
+            <Link to={{ pathname:`article/${val.featured.id}` }}>
+              <FeaturedArticle featured={val.featured} />
+            </Link>
+            
+            <h2 className="homepage__header">
+              More on ...
+            </h2>
+
             <Articles data={val.previewArray}/>
           </div>
         </div>

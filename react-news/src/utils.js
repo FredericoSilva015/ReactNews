@@ -8,24 +8,16 @@ import React from 'react';
    * @return {HTMLElement}
    * @description Method to check if author exists on title, and remove "|"
    */
- export function authorCheck(val, main) {
+ export function authorCheck(val) {
     let title = val;
     title = title.split('|'); 
 
-
-    if (main) {
-      return (
+    return (
+      <div>
         <h2>
           {title[0]}
-          <span className="author">{title[1]}</span>
         </h2>
-      );
-    }
-
-    return (
-      <h2>
-        {title[0]}
-        <span className="author">{title[1]}</span>
-      </h2>
+        <p className="author">{title[1]}</p>
+      </div>
     );
   }

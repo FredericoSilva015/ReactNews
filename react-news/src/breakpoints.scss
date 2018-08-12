@@ -5,13 +5,13 @@ $desktop: 980px + (2 * $gap) !default;
 // Breakpoints
 
 @mixin mobile {
-  @media screen and (max-width: 500px - 1px) {
+  @media screen and (max-width: $tablet - 1px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: $tablet - 1px ) {
+  @media screen and (min-width: $tablet ) {
     @content;
   }
 }

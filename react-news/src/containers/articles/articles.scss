@@ -4,11 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include mobile {
+    margin-bottom: 20px
+  }
 }
 
 .articles__link {
   flex-basis: 280px;
-  
+
   margin: 10px;
 
   @include tablet {
