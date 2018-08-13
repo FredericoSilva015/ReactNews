@@ -1,0 +1,15 @@
+@import '../../breakpoints.scss';
+
+.article__wrapper {
+  min-height: 84vh;
+  margin: 0 5%;
+  padding-top: 78px;
+}
+
+.article__img {
+  float: left;
+}
+
+.article__paragraph {
+  margin: 20px 0;
+}

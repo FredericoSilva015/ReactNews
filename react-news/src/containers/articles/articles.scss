@@ -3,23 +3,28 @@
 .articles__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
-  @include mobile {
-    margin-bottom: 20px
+  @include tablet {
+    margin-right: -20px;
+  }
+
+  @include desktop {
+    margin-right: -50px;
   }
 }
 
 .articles__link {
-  flex-basis: 280px;
+  flex-basis: 97%;
 
-  margin: 10px;
+  margin-bottom: 20px; 
 
   @include tablet {
-    flex-basis: 41%;
-    margin: 20px;
+    flex-basis: 47%;
+
+    margin-right: 20px;
   }
+
   @include desktop {
-    flex-basis: 28%;
+    flex-basis: 30%; 
   }
 }

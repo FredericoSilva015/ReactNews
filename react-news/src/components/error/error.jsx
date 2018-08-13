@@ -13,9 +13,12 @@ class Error extends Component {
   render() {
       return (
         <div className="container">
-          <p>404! Apologies good sir!But what your looking for, doesn't exist.</p>
+          <div className="error__wrapper">
+          
+            <p>404! Apologies good sir! But the content was eaten by a black hole and joined singularity!</p>
 
-          <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
+          </div>
         </div>
       );
   }

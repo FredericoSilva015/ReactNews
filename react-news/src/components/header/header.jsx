@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import Homepage from '../../containers/homepage/homepage';
 import SearchResults from '../../containers/searchResults/searchResults';
 import Article from '../../containers/article/article';
-import Footer from '../../components/footer/footer';
-import Error from '../../components/error/error';
+import Footer from '../footer/footer';
+import Error from '../error/error';
 import './header.css';
 
 /**

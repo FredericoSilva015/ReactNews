@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/header/header';
+import Header from './components/header/header.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
 
