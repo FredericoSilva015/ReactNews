@@ -3,14 +3,16 @@ import { AppContext } from '../../components/header/header';
 import { authorCheck } from '../../utils';
 import './article.css';
 
-/**
- * Container for Article
- * Contains the article
- * @class
- */
 class Article extends Component {
- 
-  test(val) {
+
+  /**
+   * @name _articleContent
+   * @param {object} val 
+   * @private
+   * @returns {HTMLElement}
+   * @description creates the article content with relation to the store
+   */
+  _articleContent(val) {
 
     if (val.isLoaded) {
       let id = this.props.location.pathname;
@@ -73,7 +75,7 @@ class Article extends Component {
             
           <AppContext.Consumer>
 
-            {(context) => { return this.test(context) }}
+            {(context) => { return this._articleContent(context) }}
 
           </AppContext.Consumer>
 

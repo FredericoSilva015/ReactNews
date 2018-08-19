@@ -8,13 +8,13 @@ import './homepage.css';
 class Homepage extends Component {
   
   /**
-   * @name content
+   * @name _content
    * @param {object} val 
    * @private
    * @returns {HTMLElement}
    * @description The loader and content is initiated with this function
    */
-  content(val) {
+  _content(val) {
 
     if (val.isLoaded) {
       return (
@@ -61,7 +61,7 @@ class Homepage extends Component {
     return (
         <AppContext.Consumer>
           {(context) => {
-              return this.content(context);
+              return this._content(context);
             }
           }
         </AppContext.Consumer>
