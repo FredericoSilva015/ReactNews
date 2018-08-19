@@ -14,8 +14,8 @@ import React from 'react';
   
   if (main) {
     return (
-      <div>
-        <h1>
+      <div >
+        <h1 >
           {title[0]}
         </h1>
         <p className="author">{title[1]}</p>
@@ -24,8 +24,8 @@ import React from 'react';
   }
 
   return (
-    <div>
-      <h2>
+    <div className="custom-underline__box">
+      <h2 className="custom-underline">
         {title[0]}
       </h2>
       <p className="author">{title[1]}</p>

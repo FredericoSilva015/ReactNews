@@ -1,10 +1,7 @@
 import React, { Component, createContext } from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
-import Homepage from '../../containers/homepage/homepage';
-import SearchResults from '../../containers/searchResults/searchResults';
-import Article from '../../containers/article/article';
+import { NavLink } from 'react-router-dom';
+import Main from '../main/main';
 import Footer from '../footer/footer';
-import Error from '../error/error';
 import './header.css';
 
 /**
@@ -64,28 +61,19 @@ componentDidMount() {
 
 render() {
     return (
-      <BrowserRouter>
+      <div>
+          {this.props.children}
+          
+          <nav className="header__navigation">
+            <NavLink className="header__link" to="/">React News</NavLink>
+          </nav>
 
-        <div>
           <AppContext.Provider value={this.state}>
-            {this.props.children}
-            
-            <nav className="header__navigation">
-              <NavLink className="header__link" to="/">React News</NavLink>
-            </nav>
-
-            <Switch>
-              <Route path="/" component={Homepage} exact />
-              <Route path="/article/:id"  name="article" component={Article} />
-              <Route path="/search-results" component={SearchResults} />
-              <Route  component={Error} />
-            </Switch>
-
-            <Footer />
+            <Main />
           </AppContext.Provider>
-        </div>
 
-      </BrowserRouter>
+          <Footer />
+      </div>
     );
   }
 }

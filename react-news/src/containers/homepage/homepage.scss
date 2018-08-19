@@ -20,3 +20,76 @@
   border-image-source: linear-gradient( to right, #1f4079 70%, #fff );
   border-image-slice: 3;
 }
+
+// Loader
+
+$itemSize : 50;
+$itemSpacing : 2;
+$squareSize : 40;
+$loaderColor : rgba(31, 64, 121, 0.7);
+$loaderDelay : 100;
+$loaderDuration : 2000;
+$animationTiming: cubic-bezier(.645, .045, .355, 1);
+
+.loader {
+  display: flex;
+  align-items: center;
+
+  height: 70vh;
+
+  margin-bottom: 15%;
+  
+  font-size: 0;
+  overflow: hidden;
+}
+
+.loader-item {
+  display: inline-block;
+
+  width: $itemSize + px;
+  height: $itemSize + px;
+
+  margin-left: $itemSpacing + px;
+
+  background-color: $loaderColor;
+  color: $loaderColor;
+  
+  animation-duration: $loaderDuration + ms;
+  animation-timing-function: $animationTiming;
+  animation-iteration-count: infinite;
+  
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: ($i * $loaderDelay) + ms;
+    }
+  }
+
+  .loader--slowFlip & {
+    animation-name: slowFlip;
+  }
+
+  .loader--slowFlip & {
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: ($i * $loaderDelay*1.5) + ms;
+      }
+    }
+  }
+
+  .loader--slideDown & {
+    animation-name: slideDown;
+    animation-duration: ($loaderDuration/2.5) + ms;
+    animation-timing-function: linear;
+  }
+
+ .loader--slideDown & {
+    transform-origin: top left;
+ }
+}
+
+@keyframes slowFlip {
+  0%    { transform: rotateX(0deg);   }
+  40%   { transform: rotateX(180deg); }
+  100%  { transform: rotateX(180deg); }
+}
+

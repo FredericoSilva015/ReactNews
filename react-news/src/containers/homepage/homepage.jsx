@@ -42,8 +42,17 @@ class Homepage extends Component {
     return (
       <div className="container">
         <div className="homepage__content-wrapper">
-          <p>Something went wrong :( . </p>
-        </div>
+
+          <div className="loader loader--slowFlip">
+            <span className="loader-item">1</span>
+            <span className="loader-item">2</span>
+            <span className="loader-item">3</span>
+            <span className="loader-item">4</span>
+            <span className="loader-item">5</span>
+            <span className="loader-item">6</span>
+            </div>
+          </div>
+
       </div>
     );
   }

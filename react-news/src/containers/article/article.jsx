@@ -3,8 +3,6 @@ import { AppContext } from '../../components/header/header';
 import { authorCheck } from '../../utils';
 import './article.css';
 
-// TODO:  join all news array here (preview + featured), add final title, image
-
 /**
  * Container for Article
  * Contains the article
@@ -18,13 +16,17 @@ class Article extends Component {
       let id = this.props.location.pathname;
       id = id.replace('/article/','');
 
-      val.previewArray.push(val.featured);
+      // val.previewArray.push(val.featured);
+      let arrayLength = val.previewArray.length;
+      let completeArray = val.previewArray.slice(0,arrayLength);
+
+      completeArray.push(val.featured);
 
       const articleData = 
-        val.previewArray.find(
+        completeArray.find(
           (item) => {return  item.id === id}
-        )
-      console.log(articleData);
+        );
+
       return (
         <div className="article__wrapper">
 
