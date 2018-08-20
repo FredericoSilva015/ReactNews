@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppContext } from '../../components/header/header';
-import { authorCheck } from '../../utils';
+import Title from '../../components/title/title';
 import './article.css';
 
 class Article extends Component {
@@ -32,9 +32,7 @@ class Article extends Component {
       return (
         <div className="article">
           <div className="article__wrapper">
-
-            {authorCheck(articleData.webTitle, true)}
-
+            <Title title={articleData.webTitle} main="true"/>
             <p>Tags: {articleData.sectionName} </p>
 
             <picture>

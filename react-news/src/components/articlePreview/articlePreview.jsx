@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { authorCheck } from '../../utils'
+import Title from '../title/title';
 import './articlePreview.css';
 
 class ArticlePreview extends Component {
@@ -10,7 +10,7 @@ class ArticlePreview extends Component {
         <div className="article-preview__wrapper">
           <div className="article-preview__img-wrapper"></div>
           <div className="article-preview__content-wrapper">
-            {authorCheck(this.props.data.webTitle)}
+            <Title title={this.props.data.webTitle}/>
           </div>
 
         </div>

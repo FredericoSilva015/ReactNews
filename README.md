@@ -5,6 +5,8 @@ to run application
 
  > cd react-news
  
+ > yarn install
+
  > yarn start
  
 #Author
