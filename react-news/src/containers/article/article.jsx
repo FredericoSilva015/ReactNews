@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppContext } from '../../components/header/header';
+import { AppContext } from '../../containers/header/header';
 import Title from '../../components/title/title';
 import './article.css';
 

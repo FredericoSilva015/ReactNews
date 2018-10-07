@@ -1,7 +1,7 @@
 import React, { Component, createContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import Main from '../main/main';
-import Footer from '../footer/footer';
+import Main from '../../components/main/main';
+import Footer from '../../components/footer/footer';
 import './header.css';
 
 /**

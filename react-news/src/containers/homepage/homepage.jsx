@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppContext } from '../../components/header/header';
+import { AppContext } from '../../containers/header/header';
 import { Link } from 'react-router-dom';
 import Articles from '../articles/articles';
 import FeaturedArticle from '../../components/featuredArticle/featuredArticle';
