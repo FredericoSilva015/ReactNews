@@ -10,11 +10,37 @@ import React, { Component } from 'react';
  * @class
  */
 class SearchResults extends Component {
- 
+
+  constructor(props) {
+    super(props);
+    this.test = this.test.bind(this);
+  };
+
+  test() {
+    console.log(this.props.location.state)
+  }
+
   render() {
       return (
         <div className="">
           <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+          <p>Search Results</p>
+
+          <button onClick={this.test}>let see</button>
         </div>
       );
   }

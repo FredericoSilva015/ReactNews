@@ -12,7 +12,8 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-      <Route render={({ location }) => {
+      <Route render={
+        ({ location }) => {
         const { pathname } = location;
 
         return (
@@ -32,10 +33,10 @@ class Main extends Component {
                   <Switch>
                     <Route path="/" component={Homepage} exact />
                     <Route path="/article/:id"  
-                            name="article" 
-                            component={Article} />
+                           name="article" 
+                           component={Article} />
                     <Route path="/search-results" 
-                            component={SearchResults} />
+                           component={SearchResults} />
                     <Route component={Error} />
                   </Switch>
 

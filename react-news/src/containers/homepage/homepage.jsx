@@ -60,10 +60,7 @@ class Homepage extends Component {
   render() {
     return (
         <AppContext.Consumer>
-          {(context) => {
-              return this._content(context);
-            }
-          }
+          {(context) => { return this._content(context); }}
         </AppContext.Consumer>
     );
   }
