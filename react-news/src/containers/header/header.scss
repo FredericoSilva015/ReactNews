@@ -3,6 +3,8 @@
 .header__navigation {
   position: fixed;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   width: 100%;
   min-height: 58px;
@@ -14,6 +16,10 @@
   border-bottom: 5px solid #1f4079;  
   border-image-source: linear-gradient( to right, #1f4079 80%, #fff );
   border-image-slice: 5;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .header__link {

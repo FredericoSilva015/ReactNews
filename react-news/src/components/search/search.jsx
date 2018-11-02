@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {  withRouter  } from 'react-router-dom';
-import SearchResults from '../../containers/searchResults/searchResults';
+import './search.css';
 
 class Search extends Component {
 
@@ -9,7 +9,8 @@ class Search extends Component {
     this.state = {
       result: [],
       request:'',
-      redirect: false
+      redirect: false,
+      loading: true
     };
 
     // providing access to props and state
@@ -27,9 +28,8 @@ class Search extends Component {
    */
   _handleChange (event) {
     const searchValue = event.target.value;
-    let result = this._queryBuilder( searchValue );
     // we prepare fetch query
-    this.setState({ request: result });
+    this.setState({ request: searchValue });
   }
 
   /**
@@ -82,32 +82,45 @@ class Search extends Component {
   _handleSubmit (event) {
     event.preventDefault();
 
-    this._fetchData()
-    
-    this.props.history.push('/search-results', { results: this.state.result });
+    console.log(this.state.request);
+
+    if (this.state.request) {
+      console.log('Request Validates');
+
+      this._fetchData()
+    }
+    else {
+      this.props.history.push('/search-results', { results: [], loading: true });
+    }
   }
 
   _fetchData() {
+    const result = this._queryBuilder( this.state.request );
+    let query = 'https://content.guardianapis.com/search?q=' + result;
     
-    let query = 'https://content.guardianapis.com/search?q=' + this.state.request;
+    this.props.history.push('/search-results', { results: [], loading: false });
 
     fetch(query)
-    .then(response => response.json())
-    .then(
-      // on success 
-      (result) => {
-        const data = result.response.results;
-        this.setState({ result: data });
-      },
-      // on error
-      (error) => {
-        console.log('DOH!!!')
-      }
+      .then(response => response.json())
+      .then(
+        // on success 
+        (result) => {
+          const data = result.response.results;
+          this.setState({ result: data });
+
+          this.setState({
+            loading : true,
+          });
+          this.props.history.push('/search-results', { results: this.state.result, loading: this.state.loading });
+        },
+        // on error
+        (error) => {
+          this.setState({
+            loading : false,
+          });
+        }
     )
-
   }
-
-
 
   render() {
       return (
@@ -117,7 +130,7 @@ class Search extends Component {
                    placeholder="Search..."
                    onChange={this._handleChange} 
             />
-            <button type="submit">Find </button>
+            <button type="submit">Find</button>
           </form>
         </div>
       );

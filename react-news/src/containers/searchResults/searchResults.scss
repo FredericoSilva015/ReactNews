@@ -1,0 +1,13 @@
+@import '../../shared.scss';
+@import '../../breakpoints.scss';
+
+.search-results {
+  margin: 0 5%;
+  padding-top: 78px;
+
+  min-height: 100vh;
+}
+
+.search-results__link {
+  display: block;
+}
